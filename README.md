@@ -35,5 +35,10 @@ La biodiversidad de Costa Rica es una de mis mayores fuentes de inspiración. Co
 - **Instagram**: [@madreverdecr](https://www.instagram.com/madreverdecr)
 - **TikTok**: [@madreverdecr](https://www.tiktok.com/@madreverdecr)
 
+## Mis estadísticas son:
+
+![Mis estadísticas de GitHub](https://github-readme-stats.vercel.app/api?username=GabyHL26&show_icons=true&theme=synthwave)
+
+
 Espero que este proyecto inspire a otros a explorar sus propias pasiones y talentos. ¡Gracias por visitar Madre Verde! 🌿
 
