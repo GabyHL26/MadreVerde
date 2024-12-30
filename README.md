@@ -37,11 +37,13 @@ La biodiversidad de Costa Rica es una de mis mayores fuentes de inspiración. Co
 
 ## Mis estadísticas son:
 
-![MadreVerde's GitHub stats](https://github-readme-stats.vercel.app/api?username=GabyHL26&show_icons=true&theme=synthwave)
+![MadreVerde's GitHub stats](https://github-readme-stats.vercel.app/api?username=GabyHL26&repo=MadreVerde&show_icons=true&hide=contribs,prs&cache_seconds=86400&theme=gruvbox)
 
-### Lenguajes más usados:
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=GabyHL26&layout=compact&theme=synthwave)](https://github.com/GabyHL26)
+## Lenguajes más utilizados:
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=GabyHL26&repo=MadreVerde&layout=compact&theme=gruvbox)
+
 
 
 Espero que este proyecto inspire a otros a explorar sus propias pasiones y talentos. ¡Gracias por visitar Madre Verde! 🌿
