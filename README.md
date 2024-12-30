@@ -39,7 +39,7 @@ La biodiversidad de Costa Rica es una de mis mayores fuentes de inspiración. Co
 
 ![MadreVerde's GitHub stats](https://github-readme-stats.vercel.app/api?username=GabyHL26&repo=MadreVerde&show_icons=true&theme=synthwave)
 
-
+[![SrGobi's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=GabyHL26&repo=MadreVerde&layout=compact)](https://github.com/SrGobi/github-readme-stats)
 
 
 Espero que este proyecto inspire a otros a explorar sus propias pasiones y talentos. ¡Gracias por visitar Madre Verde! 🌿
