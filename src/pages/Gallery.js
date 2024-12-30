@@ -132,15 +132,15 @@ const Gallery = () => {
   return (
     <div>
       {/* Header */}
-      <AppBar position="sticky" sx={{ backgroundColor: "#542638" }}>
+      <AppBar position="fixed" sx={{ backgroundColor: "#262422", top: 0, left: 0, right: 0, zIndex: 1200 }}>
         <Toolbar>
           <Typography
             variant="h4"
             sx={{
               flexGrow: 1,
-              color: "#e86f9e",
-              textAlign: "center",  // Centrado
-              fontStyle: "italic"   // Cursiva
+              color: "#D4AF37", // Dorado para el texto
+              textAlign: "center",
+              fontStyle: "italic",
             }}
           >
             MADRE VERDE
@@ -149,7 +149,7 @@ const Gallery = () => {
       </AppBar>
 
       {/* Cuerpo dividido en dos partes */}
-      <Box sx={{ display: "flex", flexDirection: "row", marginTop: '20px', padding: '0 20px' }}>
+      <Box sx={{ display: "flex", flexDirection: "row", marginTop: '100px', padding: '0 20px' }}>
         
         {/* Columna izquierda: Blog */}
         <Box sx={{ flex: 1, padding: '0 20px' }}>
@@ -179,7 +179,7 @@ const Gallery = () => {
       </Box>
 
       {/* Footer */}
-      <Box sx={{ backgroundColor: "#4dab8c", padding: "20px 0", marginTop: "40px" }}>
+      <Box sx={{ backgroundColor: "#71733C", padding: "20px 0", marginTop: "40px" }}>
         <div style={{ textAlign: "center" }}>
           <Typography variant="h6" sx={{ color: "#fff", marginBottom: "10px" }}>
             Síguenos en redes sociales!!

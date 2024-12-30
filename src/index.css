@@ -1,13 +1,77 @@
-body {
+/* index.css */
+
+/* Estilos globales */
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #262422; /* Gris oscuro casi negro */
+  color: #F2EFDC; /* Texto en beige claro */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none; /* Elimina subrayado de los enlaces */
+  color: inherit; /* Hereda el color del texto */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #71733C; /* Verde oliva apagado para los títulos */
+}
+
+button {
+  background-color: #D9564A; /* Rojo anaranjado brillante */
+  color: #F2EFDC; /* Texto en beige claro */
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #A62424; /* Rojo oscuro en hover */
+}
+
+.card {
+  background-color: #71733C; /* Verde oliva para el fondo de las tarjetas */
+}
+
+.card-content {
+  color: #F2EFDC; /* Texto en beige claro para el contenido de las tarjetas */
+}
+
+.typography-text {
+  color: #F2EFDC; /* Texto en beige claro en los títulos */
+}
+
+.typography-body {
+  color: #D9564A; /* Rojo anaranjado para las descripciones */
+}
+
+.grid-container {
+  padding: 20px;
+}
+
+/* Estilos específicos para el header y el footer */
+header {
+  background-color: #D9564A; /* Rojo anaranjado para el header */
+  color: #F2EFDC; /* Texto en beige claro */
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  background-color: #71733C; /* Verde oliva para el footer */
+  color: #F2EFDC; /* Texto en beige claro */
+  padding: 10px;
+  text-align: center;
+}
+
+/* Opcional: ajusta los enlaces dentro de header y footer */
+header a, footer a {
+  color: inherit; /* Hereda el color del header/footer */
 }
