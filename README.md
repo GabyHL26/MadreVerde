@@ -37,7 +37,7 @@ La biodiversidad de Costa Rica es una de mis mayores fuentes de inspiración. Co
 
 ## Mis estadísticas son:
 
-![Mis estadísticas de GitHub](https://github-readme-stats.vercel.app/api?username=GabyHL26&show_icons=true&theme=synthwave)
+![Mis estadísticas de GitHub](https://github-readme-stats.vercel.app/api/pin/?username=GabyHL26&repo=MadreVerde)
 
 
 Espero que este proyecto inspire a otros a explorar sus propias pasiones y talentos. ¡Gracias por visitar Madre Verde! 🌿
