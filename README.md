@@ -1,75 +1,39 @@
-<<<<<<< HEAD
-# MadreVerde
-Proyecto web para Madre Verde
-=======
-# Getting Started with Create React App
+# 🌿 Madre Verde: Un Viaje de Tecnología y Naturaleza 🌟
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Bienvenida 🌱
+¡Hola! Soy Gabriela Hidalgo López, desarrolladora de software y amante de las plantas, desde Costa Rica, un país privilegiado por su riqueza en biodiversidad. Este proyecto es un espacio donde mezclo mi pasión por la tecnología y la botánica, creando un historial personal de mi colección de plantas, iniciado en 2022.
 
-## Available Scripts
+## Sobre el Proyecto 📚
+Este repositorio es más que una página web; es un testimonio vivo de cómo la tecnología puede ayudarnos a capturar, organizar y compartir nuestras pasiones. El objetivo principal es documentar el crecimiento y progreso de mi colección de plantas, y al mismo tiempo, ofrecer un lugar donde otros puedan aprender, inspirarse y colaborar.
 
-In the project directory, you can run:
+## Características Principales 🚀
+- **Galería de Plantas**: Una sección que muestra diferentes familias de plantas, como Philodendros, Plantas Carnívoras, Suculentas, Cactus y Anturios, con detalles como su nombre científico, familia y descripciones personales.
+- **Blog**: Un espacio para compartir historias, aprendizajes y consejos relacionados con el cuidado de las plantas.
+- **Diseño Personalizado**: Colores y estilos inspirados en la naturaleza y la biodiversidad de Costa Rica, utilizando tonos como negro, rojo sangre de toro, dorado, blanco, grises y verdes similares a los de la marihuana.
+- **Header y Footer**: Incluyen el nombre del proyecto y enlaces a mis redes sociales (Instagram y TikTok).
 
-### `npm start`
+## Tecnologías Utilizadas 💻
+- **React**: Para construir la interfaz de usuario.
+- **Material-UI**: Biblioteca de componentes para un diseño moderno y responsivo.
+- **Git y GitHub**: Control de versiones y colaboración.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Cómo Contribuir 🤝
+Este repositorio está abierto a colaboraciones. Si te interesa la tecnología, las plantas, o ambas, ¡eres más que bienvenido/a! Aquí te explico cómo contribuir:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Haz un fork de este repositorio.
+2. Crea una nueva rama para tus cambios: `git checkout -b nombre-de-tu-rama`.
+3. Realiza tus cambios y haz commits: `git commit -m "Descripción de tus cambios"`.
+4. Envía tus cambios a tu repositorio fork: `git push origin nombre-de-tu-rama`.
+5. Abre un Pull Request describiendo tus cambios.
 
-### `npm test`
+## Motivación 💚
+La biodiversidad de Costa Rica es una de mis mayores fuentes de inspiración. Como desarrolladora y amante de las plantas, creo en el poder de la tecnología para preservar, celebrar y aprender de la naturaleza. Este proyecto es mi manera de combinar estas dos pasiones, mientras construyo un historial personal de mi colección de plantas.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+### Contacto 📬
+- **Instagram**: [@madreverdecr](https://www.instagram.com/madreverdecr)
+- **TikTok**: [@madreverdecr](https://www.tiktok.com/@madreverdecr)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Espero que este proyecto inspire a otros a explorar sus propias pasiones y talentos. ¡Gracias por visitar Madre Verde! 🌿
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> ccd0a0d (Mi primer commit con el proyecto Madre Verde)
