@@ -182,7 +182,7 @@ const Gallery = () => {
       <Box sx={{ backgroundColor: "#71733C", padding: "20px 0", marginTop: "40px" }}>
         <div style={{ textAlign: "center" }}>
           <Typography variant="h6" sx={{ color: "#fff", marginBottom: "10px" }}>
-            Síguenos en redes sociales!!
+            Síguenos en redes sociales!!!
           </Typography>
           <IconButton href="https://www.instagram.com/" target="_blank" sx={{ color: "#fff", margin: "0 10px" }}>
             <Instagram />
