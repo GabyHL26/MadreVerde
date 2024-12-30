@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Grid, Card, CardMedia, CardContent, Typography, Box, AppBar, Toolbar, IconButton, Link } from "@mui/material";
-import { Instagram, MusicNote } from '@mui/icons-material';
+import { Instagram, MusicNote, Favorite, FavoriteBorder } from '@mui/icons-material';
 
 // Datos de las plantas categorizadas
 const philodendros = [
@@ -38,6 +38,54 @@ const carnivoras = [
     scientificName: "Nepenthes alata",
     family: "Nepenthaceae",
     description: "Increíbles jarras que capturan presas.",
+  },
+  {
+    id: 3,
+    image: "https://via.placeholder.com/300",
+    name: "Dionaea Muscipula",
+    scientificName: "Dionaea muscipula",
+    family: "Droseraceae",
+    description: "La famosa Venus atrapamoscas, que atrapa insectos con sus hojas.",
+  },
+  {
+    id: 4,
+    image: "https://via.placeholder.com/300",
+    name: "Sarracena Leucophyla",
+    scientificName: "Sarracenia leucophyla",
+    family: "Sarraceniaceae",
+    description: "Planta con jarras en forma de trompeta que atraen y atrapan presas.",
+  },
+  {
+    id: 5,
+    image: "https://via.placeholder.com/300",
+    name: "Sarracena Purpúrea",
+    scientificName: "Sarracenia purpurea",
+    family: "Sarraceniaceae",
+    description: "Jarras purpuras que capturan insectos de manera eficiente.",
+  },
+  {
+    id: 6,
+    image: "https://via.placeholder.com/300",
+    name: "Nepenthe Mirabilis",
+    scientificName: "Nepenthes mirabilis",
+    family: "Nepenthaceae",
+    description: "Planta trepadora con jarras grandes para atrapar presas.",
+  },
+  {
+    id: 7,
+    image: "https://via.placeholder.com/300",
+    name: "Pinguicula Agnata",
+    scientificName: "Pinguicula agnata",
+    family: "Lentibulariaceae",
+    description: "Planta carnívora de hojas pegajosas que atrapan insectos pequeños.",
+  },
+  {
+    id: 8,
+    image: "https://via.placeholder.com/300",
+    name: "Drosera Hercules",
+    scientificName: "Drosera hercules",
+    family: "Droseraceae",
+    description: "Planta con hojas cubiertas de tentáculos pegajosos que atrapan presas.",
   },
 ];
 
@@ -99,7 +147,7 @@ const anturios = [
 ];
 
 // Función para renderizar cada sección de plantas
-const renderSection = (title, plants) => (
+const renderSection = (title, plants, handleLike, likedPlants, likes) => (
   <Box sx={{ marginBottom: 4 }}>
     <Typography variant="h5" gutterBottom className="color1">
       {title}
@@ -120,6 +168,17 @@ const renderSection = (title, plants) => (
               <Typography variant="body2" className="color5" sx={{ marginTop: 1 }}>
                 {plant.description}
               </Typography>
+
+              {/* Corazones para votar */}
+              <Box sx={{ marginTop: 2, display: 'flex', alignItems: 'center' }}>
+                <IconButton
+                  onClick={() => handleLike(plant.id)}
+                  color={likedPlants.includes(plant.id) ? 'error' : 'default'}
+                >
+                  {likedPlants.includes(plant.id) ? <Favorite /> : <FavoriteBorder />}
+                </IconButton>
+                <Typography variant="body2" className="color3">{likes[plant.id] || 0} Likes</Typography>
+              </Box>
             </CardContent>
           </Card>
         </Grid>
@@ -129,6 +188,22 @@ const renderSection = (title, plants) => (
 );
 
 const Gallery = () => {
+  // Estado para gestionar los "likes" de las plantas
+  const [likes, setLikes] = useState({});
+  const [likedPlants, setLikedPlants] = useState([]);
+
+  const handleLike = (plantId) => {
+    // Si ya le han dado like, quitar el like
+    if (likedPlants.includes(plantId)) {
+      setLikedPlants(likedPlants.filter((id) => id !== plantId));
+      setLikes({ ...likes, [plantId]: likes[plantId] - 1 });
+    } else {
+      // Si no le han dado like, agregar el like
+      setLikedPlants([...likedPlants, plantId]);
+      setLikes({ ...likes, [plantId]: (likes[plantId] || 0) + 1 });
+    }
+  };
+
   return (
     <div>
       {/* Header */}
@@ -158,44 +233,48 @@ const Gallery = () => {
           </Typography>
           <Typography variant="body1" className="color3" paragraph>
             Bienvenidos al blog de Madre Verde. Aquí encontrarás consejos sobre el cuidado de plantas, historias de jardinería y mucho más. 
-            Mantente al tanto de nuestras últimas novedades y aprende a cuidar tus plantas favoritas.
-          </Typography>
-          <Typography variant="body1" className="color3" paragraph>
-            En este blog exploramos temas como el cultivo de plantas carnívoras, las suculentas, y cómo las plantas tropicales pueden transformar tu hogar.
+            Mantente conectado y descubre la belleza de la naturaleza en cada rincón de tu hogar.
           </Typography>
         </Box>
-        
+
         {/* Columna derecha: Galería */}
         <Box sx={{ flex: 2, padding: '0 20px' }}>
-          <Typography variant="h4" gutterBottom className="color1">
-            Galería de Avances
-          </Typography>
-          {renderSection("Philodendros", philodendros)}
-          {renderSection("Plantas Carnívoras", carnivoras)}
-          {renderSection("Suculentas", suculentas)}
-          {renderSection("Cactus", cactus)}
-          {renderSection("Anturios", anturios)}
+          {renderSection("Philodendros", philodendros, handleLike, likedPlants, likes)}
+          {renderSection("Plantas Carnívoras", carnivoras, handleLike, likedPlants, likes)}
+          {renderSection("Suculentas", suculentas, handleLike, likedPlants, likes)}
+          {renderSection("Cactus", cactus, handleLike, likedPlants, likes)}
+          {renderSection("Anturios", anturios, handleLike, likedPlants, likes)}
         </Box>
       </Box>
 
-      {/* Footer */}
-      <Box sx={{ backgroundColor: "#71733C", padding: "20px 0", marginTop: "40px" }}>
-        <div style={{ textAlign: "center" }}>
-          <Typography variant="h6" sx={{ color: "#fff", marginBottom: "10px" }}>
-            Síguenos en redes sociales!!!
-          </Typography>
-          <IconButton href="https://www.instagram.com/" target="_blank" sx={{ color: "#fff", margin: "0 10px" }}>
+      {/* Footer fijo */}
+      <footer
+        style={{
+          backgroundColor: '#262422',
+          color: '#fff',
+          padding: '20px',
+          position: 'fixed',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          width: '100%',
+          zIndex: 1200,
+        }}
+      >
+        <Typography variant="body1" align="center">
+          Síguenos en nuestras redes sociales para más contenido:
+          <br />
+          <IconButton color="inherit" component={Link} href="https://instagram.com">
             <Instagram />
           </IconButton>
-          <Typography variant="body1" sx={{ color: "#fff", marginTop: "10px" }}>
-            <Link href="https://www.tiktok.com/" target="_blank" sx={{ color: "#fff", textDecoration: "none" }}>
-              <MusicNote sx={{ marginRight: "8px" }} /> Síguenos en TikTok
-            </Link>
-          </Typography>
-        </div>
-      </Box>
+          <IconButton color="inherit" component={Link} href="https://music.com">
+            <MusicNote />
+          </IconButton>
+        </Typography>
+      </footer>
     </div>
   );
 };
 
 export default Gallery;
+

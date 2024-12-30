@@ -1,4 +1,3 @@
-// src/theme.js
 import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
@@ -11,43 +10,65 @@ const theme = createTheme({
     },
     background: {
       default: '#000000', // Fondo negro
-      paper: '#808080', // Fondo de las tarjetas (gris)
+      paper: '#262422', // Fondo de papel oscuro
     },
     text: {
       primary: '#FFFFFF', // Texto blanco
-      secondary: '#B0B0B0', // Texto gris
-    },
-    success: {
-      main: '#4CAF50', // Verde tipo marihuana
+      secondary: '#F2EFDC', // Beige claro
     },
   },
   typography: {
-    fontFamily: 'Arial, sans-serif',
-    h4: {
+    fontFamily: '"Roboto", sans-serif',
+    h1: {
+      fontSize: '2.5rem',
       fontWeight: 700,
+      color: '#D4AF37', // Dorado para títulos principales
     },
-    h5: {
-      fontWeight: 600,
+    h2: {
+      fontSize: '2rem',
+      fontWeight: 700,
+      color: '#D4AF37', // Dorado para subtítulos
+    },
+    h3: {
+      fontSize: '1.75rem',
+      fontWeight: 700,
+      color: '#9B111E', // Rojo sangre de toro para subtítulos importantes
     },
     body1: {
-      fontWeight: 400,
+      fontSize: '1rem',
+      color: '#F2EFDC', // Beige claro para el cuerpo del texto
+    },
+    body2: {
+      fontSize: '0.875rem',
+      color: '#B0B0B0', // Gris para texto secundario
+    },
+    button: {
+      textTransform: 'none',
+      fontSize: '1rem',
+      color: '#FFFFFF', // Texto blanco en los botones
     },
   },
   components: {
-    // Estilo para el header
-    MuiAppBar: {
+    MuiButton: {
       styleOverrides: {
         root: {
-          backgroundColor: '#262422', // Color del fondo del header
+          backgroundColor: '#9B111E', // Rojo sangre de toro para botones
+          '&:hover': {
+            backgroundColor: '#D4AF37', // Dorado al pasar el ratón
+          },
         },
       },
     },
-    // Estilo para el footer
-    MuiPaper: {
+    MuiCard: {
       styleOverrides: {
         root: {
-          backgroundColor: '#71733C', // Color del fondo del footer
-          color: '#FFFFFF', // Asegura que el texto sea blanco en el footer
+          backgroundColor: '#808080', // Gris para las tarjetas
+          borderRadius: '10px',
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)',
+          transition: 'box-shadow 0.3s ease',
+          '&:hover': {
+            boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.4)', // Efecto hover en las tarjetas
+          },
         },
       },
     },
@@ -55,4 +76,3 @@ const theme = createTheme({
 });
 
 export default theme;
-

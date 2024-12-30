@@ -1,77 +1,76 @@
-/* index.css */
-
-/* Estilos globales */
+/* Reset de estilos por defecto */
 * {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-body {
-  background-color: #262422; /* Gris oscuro casi negro */
-  color: #F2EFDC; /* Texto en beige claro */
-  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-a {
-  text-decoration: none; /* Elimina subrayado de los enlaces */
-  color: inherit; /* Hereda el color del texto */
+/* Cuerpo general */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #000000; /* Fondo negro */
+  color: #fff; /* Texto blanco */
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #71733C; /* Verde oliva apagado para los títulos */
-}
-
-button {
-  background-color: #D9564A; /* Rojo anaranjado brillante */
-  color: #F2EFDC; /* Texto en beige claro */
-  border: none;
-  padding: 8px 16px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-button:hover {
-  background-color: #A62424; /* Rojo oscuro en hover */
-}
-
+/* Card: Estilo para las tarjetas */
 .card {
-  background-color: #71733C; /* Verde oliva para el fondo de las tarjetas */
+  background-color: #808080; /* Fondo gris para las tarjetas */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
 }
 
-.card-content {
-  color: #F2EFDC; /* Texto en beige claro para el contenido de las tarjetas */
+/* Efecto hover en las tarjetas */
+.card:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
 }
 
-.typography-text {
-  color: #F2EFDC; /* Texto en beige claro en los títulos */
+/* Colores personalizados */
+.color1 {
+  color: #D4AF37; /* Dorado para los títulos */
 }
 
-.typography-body {
-  color: #D9564A; /* Rojo anaranjado para las descripciones */
+.color2 {
+  color: #F2EFDC; /* Beige claro para los subtítulos */
 }
 
-.grid-container {
-  padding: 20px;
+.color3 {
+  color: #B0B0B0; /* Gris para los textos secundarios */
 }
 
-/* Estilos específicos para el header y el footer */
+.color4 {
+  color: #9B111E; /* Rojo sangre de toro para énfasis */
+}
+
+.color5 {
+  color: #9B111E; /* Rojo sangre de toro */
+}
+
+/* Header */
 header {
-  background-color: #D9564A; /* Rojo anaranjado para el header */
-  color: #F2EFDC; /* Texto en beige claro */
+  background-color: #262422; /* Fondo oscuro */
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  color: #D4AF37; /* Dorado */
+  text-align: center;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+/* Footer */
+footer {
+  background-color: #262422; /* Fondo oscuro */
+  color: #fff;
   padding: 20px;
   text-align: center;
-}
-
-footer {
-  background-color: #71733C; /* Verde oliva para el footer */
-  color: #F2EFDC; /* Texto en beige claro */
-  padding: 10px;
-  text-align: center;
-}
-
-/* Opcional: ajusta los enlaces dentro de header y footer */
-header a, footer a {
-  color: inherit; /* Hereda el color del header/footer */
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
