@@ -56,13 +56,10 @@ function App() {
         <main>
           <h2>Bienvenidos a la Galería de Plantas</h2>
           <Gallery plants={plants} />
-
+          
           {/* Sección Hospital de Plantas */}
           <div className="hospital-de-plantas">
             <h2>Hospital de Plantas</h2>
-            <p className="hospital-description">
-              En esta sección quiero compartir el proceso de recuperación de plantas que han llegado a mí de distintas formas. Algunas fueron rescatadas, otras recibieron cuidados urgentes o se encontraron en condiciones difíciles. A través de tiempo, paciencia y atención, estas plantas están en el camino hacia su recuperación, y este será su diario de vida. Aquí podrás seguir su progreso y cómo, con el paso del tiempo, pueden salir adelante y florecer.
-            </p>
             <Hospital plants={hospitalPlants} /> {/* Usando Hospital en lugar de Gallery */}
           </div>
         </main>

@@ -1,64 +1,38 @@
-import React from 'react';
-import { Card, CardContent, Typography, Grid } from '@mui/material';
+import React from "react";
+import { Card, CardContent, Typography, Grid, CardMedia } from "@mui/material";
 
-// Datos de las plantas en el "hospital"
-const hospitalData = [
-  {
-    id: 1,
-    image: "https://via.placeholder.com/300",
-    name: "Philodendro Brasil",
-    scientificName: "Philodendron hederaceum",
-    family: "Araceae",
-    description: "Esta planta está en proceso de recuperación debido a la falta de luz.",
-  },
-  {
-    id: 2,
-    image: "https://via.placeholder.com/300",
-    name: "Venus Atrapamoscas",
-    scientificName: "Dionaea muscipula",
-    family: "Droseraceae",
-    description: "Recuperando su energía después de ser descuidada por mucho tiempo.",
-  },
-  {
-    id: 3,
-    image: "https://via.placeholder.com/300",
-    name: "Ceropegia Sordida",
-    scientificName: "Ceropegia sordida",
-    family: "Apocynaceae",
-    description: "Necesita cuidados constantes para restablecerse completamente.",
-  },
-  // Agrega más plantas según sea necesario
-];
-
-const Hospital = () => {
+const Hospital = ({ plants }) => {
   return (
-    <div className="hospital-de-plantas">
-      <Grid container spacing={3} justifyContent="center">
-        {hospitalData.map((plant) => (
+    <div style={{ padding: "20px" }}>
+      <Typography variant="h5" sx={{ color: "#D4AF37", marginBottom: "20px" }}>
+        Hospital de Plantas
+      </Typography>
+      <Grid container spacing={3}>
+        {plants.map((plant) => (
           <Grid item xs={12} sm={6} md={4} key={plant.id}>
-            <Card className="planta-card">
-              <img
-                src={plant.image}
-                alt={plant.name}
+            <Card>
+              <CardMedia
+                component="img"
+                image={plant.image}
+                alt={`Imagen de ${plant.name}`}
                 style={{
-                  width: '100%',
-                  height: 'auto',
-                  borderRadius: '50%',
-                  objectFit: 'cover',
+                  borderRadius: "50%",
+                  objectFit: "cover",
+                  height: "200px",
+                  width: "200px",
+                  margin: "auto",
+                  marginTop: "10px",
                 }}
               />
               <CardContent>
-                <Typography variant="h5" component="div" color="#71733C">
+                <Typography variant="h6" sx={{ color: "#71733C" }}>
                   {plant.name}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  {plant.scientificName}
+                  <strong>Historia:</strong> {plant.story}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Familia: {plant.family}
-                </Typography>
-                <Typography variant="body2" color="text.secondary" paragraph>
-                  {plant.description}
+                <Typography variant="body2" sx={{ marginTop: 1 }}>
+                  <strong>Estado de recuperación:</strong> {plant.recoveryStatus}
                 </Typography>
               </CardContent>
             </Card>
@@ -70,3 +44,4 @@ const Hospital = () => {
 };
 
 export default Hospital;
+
