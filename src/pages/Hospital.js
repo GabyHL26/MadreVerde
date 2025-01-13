@@ -1,21 +1,22 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { Card, CardContent, Typography, Grid, CardMedia } from "@mui/material";
 
 const Hospital = ({ plants }) => {
   return (
-    <div style={{ padding: "20px" }}>
+    <div style={{ padding: "20px", backgroundColor: "#262422" }}>
       <Typography variant="h5" sx={{ color: "#D4AF37", marginBottom: "20px" }}>
         Hospital de Plantas
       </Typography>
       <Grid container spacing={3}>
         {plants.map((plant) => (
           <Grid item xs={12} sm={6} md={4} key={plant.id}>
-            <Card>
+            <Card sx={{ backgroundColor: "#3B3A36", color: "#fff", borderRadius: "10px" }}>
               <CardMedia
                 component="img"
                 image={plant.image}
                 alt={`Imagen de ${plant.name}`}
-                style={{
+                sx={{
                   borderRadius: "50%",
                   objectFit: "cover",
                   height: "200px",
@@ -43,5 +44,16 @@ const Hospital = ({ plants }) => {
   );
 };
 
-export default Hospital;
+Hospital.propTypes = {
+  plants: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      image: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      story: PropTypes.string.isRequired,
+      recoveryStatus: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
 
+export default Hospital;

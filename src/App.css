@@ -1,21 +1,21 @@
 .App {
   text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #F2EFDC; /* Fondo para el cuerpo de la página */
 }
 
-.App-header {
-  background-color: #71733C;
+.App-header, .App-footer {
+  background-color: #71733C; /* Fondo verde para el header y footer */
   padding: 20px;
   color: white;
 }
 
 h1 {
-  font-family: 'Arial', sans-serif;
   font-size: 2.5rem;
 }
 
 main {
   padding: 20px;
-  font-family: 'Arial', sans-serif;
 }
 
 h2 {
@@ -28,7 +28,6 @@ h2 {
   background-color: #262422; /* Fondo negro */
   color: #71733C; /* Texto en verde */
   padding: 40px;
-  font-family: 'Arial', sans-serif;
   border-radius: 10px;
   margin-top: 50px;
 }
@@ -38,7 +37,6 @@ h2 {
   color: #71733C; /* Títulos en verde */
 }
 
-/* Descripción debajo del título de Hospital de Plantas */
 .hospital-de-plantas .hospital-description {
   font-size: 1.1rem;
   line-height: 1.5;
